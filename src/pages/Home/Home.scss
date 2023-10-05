@@ -1,0 +1,150 @@
+.container-principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .input-wrapper {
+        width: 100%;
+        padding: 2em;
+        display: flex;
+        justify-content: space-between;
+
+
+        .input-search {
+            width: 500px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            padding: 1em 2em;
+            box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.10);
+
+
+            input {
+                width: 100%;
+                background-color: transparent;
+                border: transparent;
+                outline: none;
+                padding: 0 1em;
+            }
+        }
+
+        .custom-select {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid transparent;
+            width: 250px;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.10);
+            position: relative;
+
+            svg {
+                cursor: pointer;
+
+            }
+
+            .list-contries {
+                position: absolute;
+                width: 100%;
+                top: 110%;
+                left: 0;
+                border-radius: 15px;
+                box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.10);
+                padding: 0.5em;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                z-index: 2;
+
+
+                a {
+                    padding: 0.5em;
+
+                    &:hover {
+                        background-color: var(--Dark-Gray);
+                        color: white;
+                    }
+                }
+
+
+            }
+
+            .list-contries-light {
+                position: absolute;
+                width: 100%;
+                top: 110%;
+                left: 0;
+                border-radius: 15px;
+                box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.10);
+                background-color: white;
+                padding: 0.5em;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                z-index: 2;
+
+
+                a {
+                    padding: 0.5em;
+
+                    &:hover {
+                        background-color: var(--Dark-Gray);
+                        color: white;
+                    }
+                }
+
+
+            }
+
+
+        }
+
+
+    }
+
+    @media screen and (max-width: 375px) {
+
+        .input-wrapper {
+            padding: 1em;
+            width: 100%;
+            flex-direction: column;
+            gap: 2em;
+
+            .input-search {
+                width: 100%;
+
+                input {
+                    width: 90%;
+                    height: 100%;
+                }
+            }
+
+
+        }
+
+    }
+
+    @media screen and (max-width: 740px) {
+
+        .input-wrapper {
+            padding: 1em;
+            width: 100%;
+            flex-direction: column;
+            gap: 2em;
+
+            .input-search {
+                width: 100%;
+
+                input {
+                    width: 90%;
+                    height: 100%;
+                }
+            }
+
+
+        }
+
+    }
+}
