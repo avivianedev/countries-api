@@ -13,12 +13,14 @@ export default function InfoCountry() {
     const [fiterCountries, SetFilterCountries] = useState([])
 
 
+
     useEffect(() => {
-        const selectCountries = data.filter(country => country.name.replace(/[^a-zA-Z0-9]/g, '').toLowerCase() === String(id))
+        const selectCountries = data.filter(country => country.name.replace(/[^a-zA-Z0-9]/g, '').toLowerCase() === id)
         SetFilterCountries(selectCountries)
 
-
+        console.log(data.filter(country => country.name.replace(/[^a-zA-Z0-9]/g, '').toLowerCase() === id))
     }, [])
+
     const { mode,
         SetMode,
         changeMode,
@@ -35,6 +37,7 @@ export default function InfoCountry() {
                         Back
                     </div>
                 </Link>
+
                 {fiterCountries.map(c => (
 
                     <div key={c.name} className={mode ? "info-conntry dark-mode-body" : "info-conntry"}>
@@ -56,24 +59,21 @@ export default function InfoCountry() {
 
                                 </div>
                             </div>
-                            <div className="border-countries">
+                            {c.borders && <div className="border-countries">
                                 <p><strong>Border Countries:</strong></p>
                                 <div className="border-countries-info">
                                     {c.borders.map((b, index) => (
                                         index <= 3 && (
                                             <span key={b} className={mode ? "dark-mode" : ""}>{b}</span>
                                         )
-
                                     ))}
-
-
                                 </div>
-                            </div>
+                            </div>}
 
                         </div>
                     </div>
-
-                ))}
+                ))
+                }
 
             </section>
         </section>
