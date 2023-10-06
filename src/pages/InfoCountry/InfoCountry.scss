@@ -85,15 +85,16 @@
     }
 
     @media screen and (max-width: 1440px) {
-        height: 100%;
+        width: 100%;
 
         .info-conntry {
-            height: 100%;
+            padding: 0;
             align-items: center;
-            padding: 1em;
+
 
             .info-text {
                 .c-detail-container {
+                    gap: 1em;
 
                     p {
                         font-size: 18px;

@@ -54,7 +54,7 @@ export default function InfoCountry() {
                                 </div>
                                 <div className="c-information">
                                     <p><strong>Top Level Domain:</strong> {c.topLevelDomain}</p>
-                                    <p><strong>Currencies:</strong> {c.currencies.map(cur => cur.name)}</p>
+                                    <p><strong>Currencies:</strong> {c.currencies ? c.currencies.map(cur => cur.name) : ""}</p>
                                     <p><strong>Languages:</strong> {`${c.languages.map(l => l.name + "  ")}`}</p>
 
                                 </div>
